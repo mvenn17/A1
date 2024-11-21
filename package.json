@@ -1,0 +1,19 @@
+{
+  "name": "a1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass _src/sass:_site/css --watch",
+    "start": "npm run watch:sass & npm run watch:eleventy",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "sass": "^1.81.0"
+  }
+}
