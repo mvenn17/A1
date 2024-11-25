@@ -1,5 +1,283 @@
+/* Global Remedies
+******************/
+/* Use border-box by default, globally */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/*
+* Consistent line spacing...
+* CSS Inline Layout Module Level 3: https://drafts.csswg.org/css-inline-3/#line-sizing-property
+*/
+html {
+  line-sizing: normal;
+}
+
+/* Remove the tiny space around the edge of the page */
 body {
-  background-color: rgb(180, 222, 144);
+  margin: 0;
+}
+
+/* Headings
+***********/
+/* Switch to rem units for headings */
+/* @@@ Initial values are based on existing browser defaults */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
+
+/* Keep h1 margins consistent, even when nested */
+h1 {
+  margin: 0.67em 0;
+}
+
+/* Typography
+*************/
+/* Overflow by default is bad */
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+* 1. Solid, thin horizontal rules
+* 2. Remove Firefox `color: gray`
+* 3. Remove default `1px` height, and common `overflow: hidden`
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* Embedded Elements
+********************/
+/*
+* 1. Block display is usually what we want
+* 2. Remove strange space-below when inline
+* 3. Responsive by default
+*/
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+* Maintain intrinsic aspect ratios when `max-width` is applied
+* (iframe, embed, and object have no intrinsic ratio, set height explicitly)
+*/
+img, svg, video, canvas {
+  height: auto;
+}
+
+/*
+* There is no good reason elements default to 300px,
+* and audio files are unlikely to come with a width attribute
+*/
+audio {
+  width: 100%;
+}
+
+/* Old Browsers
+***************/
+/* Remove the border on images inside links in IE 10 and earlier */
+img {
+  border-style: none;
+}
+
+/* Hide the overflow in IE 10 and earlier */
+svg {
+  overflow: hidden;
+}
+
+/* Default block display on HTML5 elements */
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/*
+* 1. Add the correct box sizing in IE 10
+* 2. Remove the padding in IE 10
+*/
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #525238;
+}
+
+nav {
+  font-family: "Gabriela", serif;
+  background-color: #C29861;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2vw;
+  margin: auto;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.site-name {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 1.5em;
+}
+
+a:hover {
+  color: rgb(211, 197, 197);
+}
+
+.hero {
+  align-self: center;
+  background-image: linear-gradient(rgba(255, 0, 0, 0) 70%, #525238), url(../img/header.jpg);
+  background-size: cover;
+  height: 70vh;
+}
+
+.menu {
+  padding-right: 2vw;
+}
+
+@media screen and (max-width: 1500px) {
+  .hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 850px) {
+  .hero {
+    background-image: linear-gradient(rgba(255, 0, 0, 0) 70%, #525238), url(../img/header3.jpg);
+    background-size: cover;
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+/* Sections/rows */
+.row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.row.one, .row.two {
+  padding: 3vw 8vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image.one {
+  margin-left: 4vw;
+  width: 100%;
+}
+
+.image.two {
+  margin-right: 4vw;
+  width: 100%;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  padding: 4vw;
+  font-size: 1.2em;
+}
+
+.row.one h1, .row.two h1 {
+  padding-left: 1em;
+  font-family: "Gabriela", serif;
+  font-size: 3em;
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  margin: 2vw;
+  height: 0vh 10vw;
+}
+
+.row.card:last-of-type {
+  margin-right: 0;
+}
+
+.card-text {
+  padding: 2vw;
+}
+
+.card-text h2 {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  margin-top: 0;
+  text-align: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Gabriela", serif;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .row {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-image img {
+    width: 30vh;
+    height: 30vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
