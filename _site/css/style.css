@@ -127,11 +127,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   padding: 0;
 }
 
-body {
-  margin: 0;
-  background-color: #525238;
-}
-
 nav {
   font-family: "Gabriela", serif;
   background-color: #C29861;
@@ -157,11 +152,15 @@ a {
   color: white;
   padding-left: 2vw;
   padding-right: 2vw;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 a:hover {
-  color: rgb(211, 197, 197);
+  color: #d3c5c5;
+}
+
+.menu {
+  padding-right: 2vw;
 }
 
 .hero {
@@ -169,10 +168,6 @@ a:hover {
   background-image: linear-gradient(rgba(255, 0, 0, 0) 70%, #525238), url(../img/header.jpg);
   background-size: cover;
   height: 70vh;
-}
-
-.menu {
-  padding-right: 2vw;
 }
 
 @media screen and (max-width: 1500px) {
@@ -191,6 +186,9 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center center;
   }
+  a {
+    font-size: 1.5em;
+  }
 }
 /* Sections/rows */
 .row {
@@ -198,47 +196,73 @@ a:hover {
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* Sections */
-.row.one, .row.two {
-  padding: 3vw 8vw;
+.row.one, .row.two, .row.three {
+  margin-bottom: 10vw;
   color: white;
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
-
-.image.one {
-  margin-left: 4vw;
-  width: 100%;
-}
-
-.image.two {
-  margin-right: 4vw;
-  width: 100%;
 }
 
 p {
   font-family: "Quicksand", sans-serif;
   padding: 4vw;
   font-size: 1.2em;
+  text-align: center;
 }
 
-.row.one h1, .row.two h1 {
-  padding-left: 1em;
+.row.one h1, .row.two h1 .row.three h1 {
   font-family: "Gabriela", serif;
   font-size: 3em;
 }
 
+.text a {
+  color: #C29861;
+  font-size: 2em;
+}
+
+.text a:hover {
+  color: #d3c5c5;
+}
+
+.row.three {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+  .row.one {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row.two {
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    margin: 5vw;
+  }
+  .row.three {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 .row {
   display: flex;
+  justify-content: space-between;
+  flex-basis: 22%;
 }
 
 .card {
   flex: 1;
   margin: 2vw;
-  height: 0vh 10vw;
+  flex-basis: 22%;
 }
 
 .row.card:last-of-type {
@@ -258,7 +282,6 @@ p {
 
 .card-image img {
   width: 100%;
-  height: 100%;
 }
 
 h1 {
@@ -278,6 +301,47 @@ h1 {
     width: 30vh;
     height: 30vh;
   }
+}
+.episodes h2 {
+  font-family: "Gabriela", serif;
+  color: white;
+}
+
+.episodes p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  padding: 0;
+  padding-bottom: 3vw;
+}
+
+.episode {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin: 4vh;
+}
+
+.ep-image {
+  width: 45%;
+}
+
+@media screen and (max-width: 850px) {
+  .episodes p {
+    font-size: 1em;
+    margin: 0;
+  }
+  .ep-image {
+    width: 90%;
+  }
+}
+body {
+  margin: 0;
+  background-color: #525238;
 }
 
 /*# sourceMappingURL=style.css.map */

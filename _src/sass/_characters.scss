@@ -1,0 +1,43 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 22%; 
+}
+.card{
+    flex: 1;
+    margin: 2vw;
+    flex-basis: 22%; 
+}
+.row.card:last-of-type{
+    margin-right: 0;
+} 
+.card-text{
+    padding:2vw;
+}
+.card-text h2{
+    font-family: "Quicksand", sans-serif;
+    color: white;
+    margin-top: 0;
+    text-align: center;
+}
+.card-image img {
+   width: 100%;
+}
+h1 {
+    font-family: "Gabriela", serif;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 850px){
+    .row{
+         align-items: center;
+         display: flex;
+         flex-direction: column;
+    }
+    .card-image img {
+         width: 30vh;
+         height: 30vh;
+    }
+} 

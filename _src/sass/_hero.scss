@@ -1,0 +1,26 @@
+.hero {
+    align-self: center;
+    background-image: linear-gradient(#ff000000 70%, #525238), url(../img/header.jpg) ;
+    background-size:cover;
+    height: 70vh;
+}
+@media screen and (max-width: 1500px){
+    .hero {
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
+    }
+}  
+@media screen and (max-width: 850px){
+    .hero {
+         background-image: linear-gradient(#ff000000 70%, #525238), url(../img/header3.jpg) ;
+         background-size:cover;
+         height: 70vh; 
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+    }
+    a {
+         font-size: 1.5em;
+    }
+}  

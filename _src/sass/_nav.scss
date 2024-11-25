@@ -1,0 +1,31 @@
+nav {
+    font-family: "Gabriela", serif;
+    background-color: #C29861;
+    display: flex;
+    justify-content: space-between;
+    padding: .2vw;
+    margin: auto;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+.site-name {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+}
+a {
+    text-decoration: none;
+    color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 1.7em;
+}
+a:hover {
+    color: #d3c5c5;
+}
+.menu {
+    padding-right: 2vw;
+}

@@ -1,0 +1,34 @@
+
+.episodes h2{
+    font-family: "Gabriela", serif;
+    color: white;
+}
+.episodes p{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin-right: 20vw;
+    margin-left: 20vw;
+    padding: 0;
+    padding-bottom: 3vw;
+}
+.episode {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    margin: 4vh;
+}
+.ep-image {
+width: 45%;
+}
+@media screen and (max-width: 850px){
+    .episodes p{
+         font-size: 1em;
+         margin: 0;
+     }
+     .ep-image {
+        width: 90%;
+        }
+} 
